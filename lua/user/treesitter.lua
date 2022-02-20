@@ -9,6 +9,7 @@ configs.setup {
     additional_vim_regex_highlighting = false,
   },
   indent = { enable = true, disable = { "yaml" } },
+  autopairs = { enable = true },
   rainbow = {
     enable = true,
     -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
@@ -18,3 +19,4 @@ configs.setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
+
