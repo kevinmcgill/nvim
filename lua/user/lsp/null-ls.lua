@@ -14,7 +14,11 @@ null_ls.setup {
   sources = {
     formatting.prettier,
     diagnostics.eslint,
-    formatting.rubocop,
+    formatting.rubocop.with({
+      -- Use rubocop file that removes unknown parameter
+      -- Warning: Metrics/BlockLength does not support IgnoredMethods parameter.
+      extra_args = { "--config", vim.fn.expand("~/fix_rubocop.yml") }
+    }),
     diagnostics.rubocop.with({
       -- Use rubocop file that removes unknown parameter
       -- Warning: Metrics/BlockLength does not support IgnoredMethods parameter.
