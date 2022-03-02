@@ -63,6 +63,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>g", "<cmd>:lua _LAZYGIT_TOGGLE()<cr>", opts)
+keymap("n", "<leader>gb", "<cmd>TermExec cmd=\"tig %:p\" direction=\"float\"<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
