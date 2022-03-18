@@ -31,6 +31,12 @@ local mode = {
   end,
 }
 
+local filename = {
+  "filename",
+  file_status = true,      -- Displays file status (readonly status, modified status)
+  path = 1,                -- 1: Relative path, 2: Absolute path
+}
+
 local filetype = {
   "filetype",
   icons_enabled = false,
@@ -76,7 +82,7 @@ lualine.setup({
     lualine_b = { mode },
     lualine_c = {},
     -- lualine_x = { "encoding", "fileformat", "filetype" },
-    lualine_x = { diff, spaces, "encoding", filetype },
+    lualine_x = { filename, diff, spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { progress },
   },
