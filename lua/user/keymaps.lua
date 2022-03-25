@@ -60,8 +60,16 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- Quickfix
+keymap("n", "<leader>q", ":copen<CR>", opts)
+
+-- Telescope related
+keymap("n", "<leader>r", "<cmd>Telescope resume<cr>", opts)
 keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>w", "<cmd>Telescope grep_string<cr>", opts)
+
+-- LazyGit and Tig
 keymap("n", "<leader>g", "<cmd>:lua _LAZYGIT_TOGGLE()<cr>", opts)
 keymap("n", "<leader>gb", "<cmd>TermExec cmd=\"tig %:p\" direction=\"float\"<cr>", opts)
 
