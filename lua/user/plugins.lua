@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim", branch = 'main' }
   use 'nvim-lualine/lualine.nvim'
   use { "akinsho/toggleterm.nvim", branch = 'main' }
+  use "mtdl9/vim-log-highlighting"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
