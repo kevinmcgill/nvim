@@ -71,7 +71,7 @@ keymap("n", "<leader>w", "<cmd>Telescope grep_string<cr>", opts)
 
 -- LazyGit and Tig
 keymap("n", "<leader>g", "<cmd>:lua _LAZYGIT_TOGGLE()<cr>", opts)
-keymap("n", "<leader>gb", "<cmd>TermExec cmd=\"tig %:p\" direction=\"float\"<cr>", opts)
+keymap("n", "<leader>gb", "<cmd>DiffviewFileHistory<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
