@@ -77,3 +77,6 @@ keymap("n", "<leader>gb", "<cmd>DiffviewFileHistory<cr>", opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
+-- Debugging
+keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<cr>", opts)
+

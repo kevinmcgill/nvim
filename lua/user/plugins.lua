@@ -78,6 +78,12 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
+  -- DAP
+  use "mfussenegger/nvim-dap" -- enable DAP
+  use "suketa/nvim-dap-ruby"
+  use "rcarriga/nvim-dap-ui"
+  use "theHamsta/nvim-dap-virtual-text"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 

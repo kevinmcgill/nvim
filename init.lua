@@ -14,4 +14,5 @@ require "user.bufferline"
 require "user.lualine"
 require "user.toggleterm"
 require "user.diffview"
+require "user.dap"
 
