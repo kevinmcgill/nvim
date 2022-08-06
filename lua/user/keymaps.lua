@@ -67,6 +67,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Quickfix
 keymap("n", "<leader>q", ":copen<CR>", opts)
+keymap("n", "<leader>Q", ":cclose<CR>", opts)
 
 -- Telescope related
 keymap("n", "<leader>r", "<cmd>Telescope resume<cr>", opts)
