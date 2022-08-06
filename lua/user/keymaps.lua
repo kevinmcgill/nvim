@@ -65,8 +65,10 @@ keymap("n", "<leader>q", ":copen<CR>", opts)
 
 -- Telescope related
 keymap("n", "<leader>r", "<cmd>Telescope resume<cr>", opts)
- -- show hidden files, except *.git, respect gitignore
-keymap("n", "<leader>p", "<cmd>Telescope find_files find_command=rg,--hidden,--files,-g,!.git<cr>", opts)
+-- show hidden files, except *.git, respect gitignore
+-- keymap("n", "<leader>p", "<cmd>Telescope find_files find_command=rg,--hidden,--files,-g,!.git<cr>", opts)
+-- or just use git_files
+keymap("n", "<leader>p", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>w", "<cmd>Telescope grep_string<cr>", opts)
 
