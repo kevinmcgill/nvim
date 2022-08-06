@@ -77,3 +77,8 @@ keymap("n", "<leader>gb", "<cmd>DiffviewFileHistory<cr>", opts)
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
+-- Neotest-rspec
+-- Test the spec under the cursor 
+keymap("n", "<leader>t", "<cmd>:lua require('neotest').run.run()<cr>", opts)
+-- Test the current rspec file
+keymap("n", "<leader>tf", "<cmd>:lua require('neotest').run.run(vim.fn.expand('%'))<cr>", opts)
