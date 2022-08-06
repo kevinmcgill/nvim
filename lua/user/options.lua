@@ -33,7 +33,8 @@ local options = {
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  list = true                              -- show tabs as ">", trailing spaces as "-", and non-breakable space characters as "+"
+  list = true,                             -- show tabs as ">", trailing spaces as "-", and non-breakable space characters as "+"
+  laststatus = 3                           -- global status line, not one per window
 }
 
 vim.opt.shortmess:append "c"
