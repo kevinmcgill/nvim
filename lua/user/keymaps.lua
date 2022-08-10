@@ -25,11 +25,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Zoom in on a window split
-keymap("n", "zi", "<C-w>_<C-w>\\", opts)
--- Zoom out of a window split
-keymap("n", "zo", "<C-w>=", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
