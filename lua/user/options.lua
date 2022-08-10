@@ -34,7 +34,9 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   list = true,                             -- show tabs as ">", trailing spaces as "-", and non-breakable space characters as "+"
-  laststatus = 3                           -- global status line, not one per window
+  laststatus = 3,                          -- global status line, not one per window
+  foldmethod = "indent",                   -- use indents as the method for folding
+  foldenable = false,                      -- ideally do not auto-fold every file after opening
 }
 
 vim.opt.shortmess:append "c"
