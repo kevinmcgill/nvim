@@ -62,17 +62,21 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Quickfix
 keymap("n", "<leader>q", ":copen<CR>", opts)
+keymap("n", "<leader>Q", ":cclose<CR>", opts)
 
 -- Telescope related
 keymap("n", "<leader>r", "<cmd>Telescope resume<cr>", opts)
- -- show hidden files, except *.git, respect gitignore
-keymap("n", "<leader>p", "<cmd>Telescope find_files find_command=rg,--hidden,--files,-g,!.git<cr>", opts)
+-- show hidden files, except *.git, respect gitignore
+-- keymap("n", "<leader>p", "<cmd>Telescope find_files find_command=rg,--hidden,--files,-g,!.git<cr>", opts)
+-- or just use git_files
+keymap("n", "<leader>p", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>w", "<cmd>Telescope grep_string<cr>", opts)
 
 -- LazyGit and Tig
 keymap("n", "<leader>g", "<cmd>:lua _LAZYGIT_TOGGLE()<cr>", opts)
-keymap("n", "<leader>gb", "<cmd>DiffviewFileHistory<cr>", opts)
+keymap("n", "<leader>gh", "<cmd>DiffviewFileHistory<cr>", opts)
+keymap("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -80,3 +84,8 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Debugging
 keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<cr>", opts)
 
+-- Neotest-rspec
+-- Test the spec under the cursor 
+keymap("n", "<leader>t", "<cmd>:lua require('neotest').run.run()<cr>", opts)
+-- Test the current rspec file
+keymap("n", "<leader>tf", "<cmd>:lua require('neotest').run.run(vim.fn.expand('%'))<cr>", opts)

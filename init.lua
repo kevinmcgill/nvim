@@ -15,4 +15,5 @@ require "user.lualine"
 require "user.toggleterm"
 require "user.diffview"
 require "user.dap"
+require "user.neotest"
 

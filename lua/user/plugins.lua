@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'shaunsingh/moonlight.nvim'
   use 'EdenEast/nightfox.nvim'
+  use 'projekt0n/github-nvim-theme'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -85,8 +86,10 @@ return packer.startup(function(use)
   use "theHamsta/nvim-dap-virtual-text"
 
   -- Telescope
-  use "nvim-telescope/telescope.nvim"
-
+  use {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -94,10 +97,22 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'nvim-treesitter/nvim-treesitter-context'
 
   -- Git
   use "lewis6991/gitsigns.nvim"
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  -- Test runner
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim", -- see https://github.com/neovim/neovim/issues/12587
+      'olimorris/neotest-rspec'
+    }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

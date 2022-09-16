@@ -26,14 +26,17 @@ local options = {
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
   number = true,                           -- set numbered lines
-  relativenumber = false,                  -- set relative numbered lines
+  relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
-  list = true                              -- show tabs as ">", trailing spaces as "-", and non-breakable space characters as "+"
+  list = true,                             -- show tabs as ">", trailing spaces as "-", and non-breakable space characters as "+"
+  laststatus = 3,                          -- global status line, not one per window
+  foldmethod = "indent",                   -- use indents as the method for folding
+  foldenable = false,                      -- ideally do not auto-fold every file after opening
 }
 
 vim.opt.shortmess:append "c"
