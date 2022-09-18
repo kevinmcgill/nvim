@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -83,6 +83,8 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Debugging
 keymap("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<cr>", opts)
+keymap("n", "<leader>c", ":lua require'dap'.continue()<cr>", opts)
+keymap("n", "<leader>s", ":lua require'dap'.step_over()<cr>", opts)
 
 -- Neotest-rspec
 -- Test the spec under the cursor 
