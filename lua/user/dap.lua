@@ -18,8 +18,8 @@ dap.adapters.ruby = function(callback, config)
     host = "127.0.0.1",
     port = "${port}",
     executable = {
-      command = "bundle",
-      args = { "exec", "rdbg", "--open", "--port", "${port}", "-c", "--", config.command, script },
+      command = "rdbg",
+      args = { "--open", "--port", "${port}", "-c", "--", config.command, script },
     },
   })
 end
