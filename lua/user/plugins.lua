@@ -75,9 +75,12 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use {
+    "williamboman/mason.nvim", -- package manager
+    "williamboman/mason-lspconfig.nvim", -- bridge between mason and lspconfig
+    "neovim/nvim-lspconfig", -- enable LSP
+    "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  }
 
   -- DAP
   use "mfussenegger/nvim-dap" -- enable DAP

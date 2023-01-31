@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
--- local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -87,7 +85,7 @@ keymap("n", "<leader>c", ":lua require'dap'.continue()<cr>", opts)
 keymap("n", "<leader>s", ":lua require'dap'.step_over()<cr>", opts)
 
 -- Neotest-rspec
--- Test the spec under the cursor 
+-- Test the spec under the cursor
 keymap("n", "<leader>t", "<cmd>:lua require('neotest').run.run()<cr>", opts)
 -- Test the current rspec file
 keymap("n", "<leader>tf", "<cmd>:lua require('neotest').run.run(vim.fn.expand('%'))<cr>", opts)
