@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'shaunsingh/moonlight.nvim'
   use 'EdenEast/nightfox.nvim'
-  use 'projekt0n/github-nvim-theme'
+  use { 'projekt0n/github-nvim-theme', tag = 'v0.0.7' } -- fixed to a specific tag
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
