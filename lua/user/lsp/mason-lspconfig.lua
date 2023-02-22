@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua", "solargraph", "yamlls", "jsonls", "graphql", "dockerls", "html", "eslint", "cssls", "angularls" }
+  ensure_installed = { "lua_ls", "solargraph", "yamlls", "jsonls", "graphql", "dockerls", "html", "eslint", "cssls", "angularls" }
 })
 
 local lspconfig = require("lspconfig")
@@ -66,7 +66,7 @@ local on_attach = function(_, bufnr)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
