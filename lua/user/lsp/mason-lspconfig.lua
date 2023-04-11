@@ -1,5 +1,5 @@
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "solargraph", "yamlls", "jsonls", "graphql", "dockerls", "html", "eslint", "cssls", "angularls" }
+  ensure_installed = { "lua_ls", "solargraph", "yamlls", "jsonls", "graphql", "dockerls", "html", "eslint", "cssls", "angularls", "tsserver" }
 })
 
 local lspconfig = require("lspconfig")
@@ -85,4 +85,5 @@ lspconfig.html.setup { on_attach = on_attach }
 lspconfig.eslint.setup { on_attach = on_attach }
 lspconfig.cssls.setup { on_attach = on_attach }
 lspconfig.angularls.setup { on_attach = on_attach }
+lspconfig.tsserver.setup { on_attach = on_attach }
 
