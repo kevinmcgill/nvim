@@ -74,7 +74,7 @@ keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -- LazyGit and Tig
 keymap("n", "<leader>g", "<cmd>:lua _LAZYGIT_TOGGLE()<cr>", opts)
-keymap("n", "<leader>gh", "<cmd>DiffviewFileHistory<cr>", opts)
+keymap("n", "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", opts)
 keymap("n", "<leader>gb", "<cmd>Gitsigns blame_line<cr>", opts)
 
 -- Nvimtree
