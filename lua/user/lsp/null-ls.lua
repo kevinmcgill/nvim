@@ -14,7 +14,6 @@ null_ls.setup {
   sources = {
     formatting.prettier,
     diagnostics.eslint,
-    formatting.rubocop,
     diagnostics.rubocop.with({
       extra_args = { "--extra-details", "--display-style-guide" }
     }),
