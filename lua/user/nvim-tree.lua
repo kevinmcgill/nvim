@@ -1,69 +1,43 @@
 -- See documentation in `:help nvim-tree.OPTION_NAME`
 
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-  return
-end
+local nvim_tree = require("nvim-tree")
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
+local function on_attach(bufnr)
+  local api = require('nvim-tree.api')
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
+  local function opts(desc)
+    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
+
+  -- Default mappings.
+  api.config.mappings.default_on_attach(bufnr)
+
+  -- Custom mappings
+  vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', 'o', api.node.open.edit, opts('Open'))
+  vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
+  vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
+end
 
 nvim_tree.setup {
+  on_attach = on_attach,
   disable_netrw = true,
   diagnostics = {
     enable = true,
     show_on_dirs = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    },
   },
   renderer = {
     highlight_git = true,
-    icons = {
-      glyphs = {
-        default = "",
-        symlink = "",
-        folder = {
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-          symlink = "",
-        },
-        git = {
-          unstaged = "",
-          staged = "S",
-          unmerged = "",
-          renamed = "➜",
-          deleted = "",
-          untracked = "U",
-          ignored = "◌",
-        }
-      }
-    }
   },
   update_focused_file = {
     enable = true,
     update_cwd = true,
-    ignore_list = {},
   },
   view = {
     width = 80,
     preserve_window_proportions = true,
-    side = "right",
-    mappings = {
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
+    side = "right"
   },
 }
+
