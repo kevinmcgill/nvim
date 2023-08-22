@@ -70,6 +70,7 @@ keymap("n", "<leader>p", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>w", "<cmd>Telescope grep_string<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>m", "<cmd>Telescope marks<cr>", opts)
 keymap("n", "<leader>q", "<cmd>Telescope quickfix<cr>", opts)
 
 -- LazyGit and Tig
