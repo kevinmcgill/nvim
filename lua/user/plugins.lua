@@ -95,6 +95,12 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'nvim-treesitter/nvim-treesitter-context'
+  -- Syntax aware text-objects, select, move, swap, and peek support.
+  use({
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+    requires = "nvim-treesitter/nvim-treesitter",
+  })
 
   -- Git
   use "lewis6991/gitsigns.nvim"
