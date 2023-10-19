@@ -1,5 +1,17 @@
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "solargraph", "yamlls", "jsonls", "graphql", "dockerls", "html", "eslint", "cssls", "angularls", "tsserver" }
+  ensure_installed = {
+    "lua_ls",
+    "solargraph",
+    "yamlls",
+    "jsonls",
+    "graphql",
+    "dockerls",
+    "html",
+    "eslint",
+    "cssls",
+    "angularls",
+    "tsserver"
+  }
 })
 
 local lspconfig = require("lspconfig")
